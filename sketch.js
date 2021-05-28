@@ -5,17 +5,18 @@ var comScore = 0;
 var plaScore = 0;
 var pla1Score = 0;
 var pla2Score = 0;
-var striker,goal1,goal2,Mallet1,Mallet2;striker = createSprite(200, 200, 10, 10);
-striker.shapeColor = "white";
+var striker,goal1,goal2,Mallet1,Mallet2;
 function setup(){
-goal1 = createSprite(200, 10, 100, 20);
-goal1.shapeColor = "yellow";
-goal2 = createSprite(200, 390, 100, 20);
-goal2.shapeColor = "yellow";
-Mallet1 = createSprite(200, 50, 50, 10);
-Mallet1.shapeColor = "black";
-Mallet2 = createSprite(200, 350, 50, 10);
-Mallet2.shapeColor = "black";
+  goal1 = createSprite(200, 10, 100, 20);
+  goal1.shapeColor = "yellow";
+  goal2 = createSprite(200, 390, 100, 20);
+  goal2.shapeColor = "yellow";
+  Mallet1 = createSprite(200, 50, 50, 10);
+  Mallet1.shapeColor = "black";
+  Mallet2 = createSprite(200, 350, 50, 10);
+  Mallet2.shapeColor = "black";
+  striker = createSprite(200, 200, 10, 10);
+  striker.shapeColor = "white";
 }
 function draw() {
   //the state of game in which we have to select modes 
