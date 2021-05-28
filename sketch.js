@@ -86,7 +86,6 @@ function draw() {
     for (var i = 0; i < 400; i=i+20) {
       line(i, 200, i+10, 200);
     }
-    createEdgeSprites();
     //objects bouncing
     striker.bounceoff(edges);
     striker.bounceoff(Mallet1);
