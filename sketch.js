@@ -5,7 +5,7 @@ var comScore = 0;
 var plaScore = 0;
 var pla1Score = 0;
 var pla2Score = 0;
-var striker,goal1,goal2,Mallet1,Mallet2;
+var striker,goal1,goal2,Mallet1,Mallet2,edges;
 function setup(){
   goal1 = createSprite(200, 10, 100, 20);
   goal1.shapeColor = "yellow";
@@ -17,6 +17,7 @@ function setup(){
   Mallet2.shapeColor = "black";
   striker = createSprite(200, 200, 10, 10);
   striker.shapeColor = "white";
+  edges = new Group();
 }
 function draw() {
   //the state of game in which we have to select modes 
@@ -129,11 +130,6 @@ function draw() {
     }
     
   }
-  
-  
-  
-  
-  
   if (gameState === "2") {
     background("red");
     fill("white");
@@ -270,4 +266,19 @@ function reset() {
   striker.y = 200;
   striker.velocityX = 0;
   striker.velocityY = 0;
+}
+function createEdgeSprites()
+{
+  up_edge = createSprite(width/2,0,width,10);
+  up_edge.visible = false;
+  edges.add(up_edge);
+  right_edge = createSprite(width,height/2,10,height);
+  right_edge.visible = false;
+  edges.add(right_edge);
+  bottom_edge = createSprite(width/2,height,width,10);
+  bottom_edge.visible = false;
+  edges.add(bottom_edge);
+  left_edge = createSprite(0,height/2,10,height);
+  left_edge.visible = false;
+  edges.add(left_edge);
 }
