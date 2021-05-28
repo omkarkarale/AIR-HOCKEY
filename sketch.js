@@ -18,6 +18,18 @@ function setup(){
   striker = createSprite(200, 200, 10, 10);
   striker.shapeColor = "white";
   edges = new Group();
+  up_edge = createSprite(width/2,0,width,1);
+  up_edge.visible = false;
+  edges.add(up_edge);
+  right_edge = createSprite(width,height/2,1,height);
+  right_edge.visible = false;
+  edges.add(right_edge);
+  bottom_edge = createSprite(width/2,height,width,1);
+  bottom_edge.visible = false;
+  edges.add(bottom_edge);
+  left_edge = createSprite(0,height/2,1,height);
+  left_edge.visible = false;
+  edges.add(left_edge);
 }
 function draw() {
   //the state of game in which we have to select modes 
@@ -264,19 +276,4 @@ function reset() {
   striker.y = 200;
   striker.velocityX = 0;
   striker.velocityY = 0;
-}
-function createEdgeSprites()
-{
-  up_edge = createSprite(width/2,0,width,10);
-  up_edge.visible = false;
-  edges.add(up_edge);
-  right_edge = createSprite(width,height/2,10,height);
-  right_edge.visible = false;
-  edges.add(right_edge);
-  bottom_edge = createSprite(width/2,height,width,10);
-  bottom_edge.visible = false;
-  edges.add(bottom_edge);
-  left_edge = createSprite(0,height/2,10,height);
-  left_edge.visible = false;
-  edges.add(left_edge);
 }
