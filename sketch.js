@@ -99,10 +99,10 @@ function draw() {
       line(i, 200, i+10, 200);
     }
     //objects bouncing
-    striker.bounceoff(edges);
-    striker.bounceoff(Mallet1);
-    striker.bounceoff(Mallet2);
-    Mallet2.bounceoff(edges);
+    striker.bounceOff(edges);
+    striker.bounceOff(Mallet1);
+    striker.bounceOff(Mallet2);
+    Mallet2.bounceOff(edges);
     //Its starting moving
     if (keyDown("space") && gameSta === "serve") {
       serve();
